@@ -21,6 +21,8 @@ Exploratory factory analysis for "concern for the war" scale:
 
 Models for RQ 1:
 
+-anxiety_media_ols.R (Report Anxiety-Media Model Fixed Effects)
+
 Models for RQ2:
 
 -glmm.R
