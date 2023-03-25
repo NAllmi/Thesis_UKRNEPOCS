@@ -26,18 +26,16 @@ library(tidyverse)
 library(plyr)
 library(ggplot2)
 library(dplyr)
-#library(ggcorrplot)
 library(glmmTMB)
 library(DHARMa)
-library(regclass)
-library(ordinal)
 library(xtable)
 library(car)
 library(lmtest)
 library(estimatr)
-#library(GGally)
-#library(gridExtra)
-
+library(performance)
+library(corrplot)
+library(psych)
+library(GPArotation)
 # Run the following files
 # -------------------------------
 
