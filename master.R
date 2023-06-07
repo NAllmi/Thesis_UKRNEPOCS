@@ -14,7 +14,7 @@ rm(list = ls())
 # -------------------------------
 
 if (Sys.getenv("USERNAME") == "natal"){
-  setwd("C:/Users/natal/OneDrive/Documents/Documents/Work/Thesis/replication/")}
+  setwd("C:/Users/natal/OneDrive/Documents/GitHub/Thesis_UKRNEPOCS/")}
 
 
 # If needed, install, and then load the following packages:
@@ -32,18 +32,40 @@ library(xtable)
 library(car)
 library(lmtest)
 library(estimatr)
+library(sandwich)
 library(performance)
 library(corrplot)
 library(psych)
 library(GPArotation)
+library(MuMIn)
+library(MASS)
+library(broom)
+library(broom.helpers)
+library(GGally)
+library(broom.mixed)
+library(jtools)
+library(fastDummies)
+library(huxtable)
+library(pheatmap)
+#library(ModelMetrics)
 # Run the following files
 # -------------------------------
+
+
 
 # load and prepare data
 source("data_preprocessing.R")
 
- 
+#models rq1
+source("rq1_models.R")
 
+#models rq2
+source("rq2_glm_models.R")
+
+#clear everything
+rm(list = ls(all.names = TRUE))
+#run efa and save output images
+source("efa.R")
 
 ## END
 

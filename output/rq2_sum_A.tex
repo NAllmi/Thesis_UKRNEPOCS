@@ -1,0 +1,841 @@
+\documentclass{article}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage[normalem]{ulem}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{calc}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+% These are LaTeX packages. You can install them using your LaTex management software,
+% or by running `huxtable::install_latex_dependencies()` from within R.
+% Other packages may be required if you use non-standard tabulars (e.g. tabulary).
+\pagenumbering{gobble}
+
+\begin{document}
+
+
+  \providecommand{\huxb}[2]{\arrayrulecolor[RGB]{#1}\global\arrayrulewidth=#2pt}
+  \providecommand{\huxvb}[2]{\color[RGB]{#1}\vrule width #2pt}
+  \providecommand{\huxtpad}[1]{\rule{0pt}{#1}}
+  \providecommand{\huxbpad}[1]{\rule[-#1]{0pt}{#1}}
+
+\begin{table}[ht]
+\begin{centerbox}
+\begin{threeparttable}
+\captionsetup{justification=centering,singlelinecheck=off}
+\caption{Results from country-by-country negative binomial regressions. 
+             Cell entries are coefficients and standard
+              errors are in parentheses. The outcome variable is fact-checks. 
+              All continuous variables are scaled to range from 0 to 1.}
+ \label{summodel::rq2A}
+\setlength{\tabcolsep}{0pt}
+\begin{tabularx}{200mm}{p{40mm} p{15mm} p{15mm} p{15mm} p{15mm} p{15mm} p{15mm} p{15mm} p{15mm} p{15mm} p{15mm}}
+
+
+\hhline{>{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Denmark}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Greece}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Brazil}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Italy}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Romania}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Belgium}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont France}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Switzerland}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Hungary}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\centering {\fontsize{7pt}{8.4pt}\selectfont Austria}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont (Intercept)}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1.06 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1.44 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.67 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.80 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.81 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.15\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.45 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.56 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.46 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.48\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.22)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.19)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.22)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.23)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.23)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.24)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont AgeCat18-24}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.20\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.18 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.03\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.12\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.03\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.11\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.30 **\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.09)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.09)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.10)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.07)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.10)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.08)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont AgeCat75 or older}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.14\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.18\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.15\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.12\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.12\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.11\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.17\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.10)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.51)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.07)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.56)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.10)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.08)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.24)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont woman}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.03\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.15 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.10 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.11 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.06)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.06)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.06)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.06)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont college\_gradCollege graduate}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.00\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.11 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.16 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.17 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.14 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.16 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.06)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.06)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.06)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.05)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.06)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont pol\_cynisism\_scale}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.03\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.21\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.11\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.33 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.26\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.12\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.34\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.24\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont trust\_gov}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.03\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.12\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.26\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.09\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.09)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.19)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont Political\_Interest}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.38 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.38 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.27 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.25 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.26 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.25 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.44 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.38 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.61 ***}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.09)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.09)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.10)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.09)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.10)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.09)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont political\_orient}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.20\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.16\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.12\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.32\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.20\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.34\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.16\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.36\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.22)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.22)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.21)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.19)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.22)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.22)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.25)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.25)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.23)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.26)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont political\_orient\_sq}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.44\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.17\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.31\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.14\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.26\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.26\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.11\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.12\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.33)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.30)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.24)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.26)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.25)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.32)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.34)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.37)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.28)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.40)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont satisfaction\_dem}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.33 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.14\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.10\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.75 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.11\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.09)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont media\_trust\_scale}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.32\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.59 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.38 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.61 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.15\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.23\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.22\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.23\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.22\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.19)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont sp\_media\_lit\_scale}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.54 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.22\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.62 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.32\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.48 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.50 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.03\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.25\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.54 **\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.19)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.21)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.22)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.21)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont TV}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.14\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.19\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.19\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.31\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.26\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.12\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.09\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont newspapers}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.10\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.21\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.16\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.17\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.19)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont social\_media}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.24\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.14\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.21\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.17\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.25 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.15\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.00\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont radio}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.09\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.11\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.40 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.01\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.20\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.20\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont aggregators}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.16\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.23\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.00\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.15\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.36\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.00\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.55 **\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.10\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.09\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.19)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.21)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont messaging}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.23\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.03\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.09\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.33\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.15\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont left\_alt}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.17\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.15\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.18\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.13\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.26\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.18\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont right\_alt}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.03\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.20\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.00\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.16\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.09\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.17\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.11\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont anxiety}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.02\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.16\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.14\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.04\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.29 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont -0.19\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.11)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.08)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.10)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.14)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.12)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont importance\_scale}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.20\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.34 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.26\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.21\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.18\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.69 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.73 ***}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.08\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.32 *\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.67 ***}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont }\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.13)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.16)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.20)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.18)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.15)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont (0.17)\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont N}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1001\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1005\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1001\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1001\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1006\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1000\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1003\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1003\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1000\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 1000\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{40mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont Pseudo R2}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.05\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.06\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.09\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.07\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.10\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} &
+\multicolumn{1}{p{15mm}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{15mm-0pt-0pt}{\huxtpad{0pt + 1em}\raggedleft {\fontsize{7pt}{8.4pt}\selectfont 0.10\hphantom{0}\hphantom{0}\hphantom{0}\hphantom{0}}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}->{\huxb{0, 0, 0}{0.8}}-}
+\arrayrulecolor{black}
+
+\multicolumn{11}{!{\huxvb{0, 0, 0}{0}}p{40mm+15mm+15mm+15mm+15mm+15mm+15mm+15mm+15mm+15mm+15mm+20\tabcolsep}!{\huxvb{0, 0, 0}{0}}}{\hspace{0pt}\parbox[b]{40mm+15mm+15mm+15mm+15mm+15mm+15mm+15mm+15mm+15mm+15mm+20\tabcolsep-0pt-0pt}{\huxtpad{0pt + 1em}\raggedright {\fontsize{7pt}{8.4pt}\selectfont  *** p $<$ 0.001;  ** p $<$ 0.01;  * p $<$ 0.05.}\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+\end{tabularx}
+\end{threeparttable}\par\end{centerbox}
+
+\end{table}
+
+
+
+\end{document}

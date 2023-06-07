@@ -172,12 +172,16 @@ df$satisfaction_dem <- data$Q1_4
 df$trust_gov <- data$Q1_5 
 df$Political_Interest <- data$Political_Interest 
 
+
+df$political_orient <- data$Political_Orientation
 # there is some research suggesting that relationships could be U-shapred
 #with extremists being different from people in the middle - so then we'd want a squared (or any non-linear) term in a regression to account for that
 df$political_orient_sq <- data$Political_Orientation -5 #center around 0
 df$political_orient_sq <- df$political_orient_sq^3 #elevate to cube so it will have a u shape 
 
+#Print plots and tables for data collection section before normalizing
 
+source("data_collection_output.R")
 
 #--------------------------------------------
 #Normalize  data
@@ -185,7 +189,7 @@ df$political_orient_sq <- df$political_orient_sq^3 #elevate to cube so it will h
 
 range01 <- function(x){(x-min(x))/(max(x)-min(x))} #define function to standardize
 
-df[,6:31] <- lapply(df[,6:31], range01) #apply function to all continuous data
+df[,6:32] <- lapply(df[,6:32], range01) #apply function to all continuous data
 
 #------------------------------------
 #remove original data
