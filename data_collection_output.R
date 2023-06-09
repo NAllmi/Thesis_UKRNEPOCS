@@ -25,7 +25,7 @@ p <- ggplot(df, aes(x=fact_checks)) +
         plot.title = element_text(hjust = 0.5, size=18),
         axis.text = element_text(size = 15),
         axis.title = element_text(size = 15))+ 
-  xlab('Number of fact-checked statements')+ 
+  xlab('Fact-checked statements')+ 
   ylab('Frequency')+
   scale_x_continuous(breaks=seq(0,10,1))+
   geom_vline(aes(xintercept=mean(fact_checks)),

@@ -154,10 +154,7 @@ ggsave(p, file='output/coefs_rq1_anx.png',width=10, height=13) #save plot to out
 tbl <- export_summs(models[1:10],digits=2,
                     statistics = c(N = "nobs", R2adj = "adj.r.squared"))
 tbl <- set_font_size(tbl, 7)
-tbl <- set_caption(tbl, 'Results from country-by-country OLS models. 
-             Cell entries are OLS coefficients and robust standard
-              errors are in parentheses. The outcome variable (anxiety) 
-              and all continuous variables are scaled to range from 0 to 1.')
+tbl <- set_caption(tbl, 'Results from country-by-country OLS regressions for outcome variable anxiety (models include political and demographic controls). Cell entries are coefficient values and robust standard errors are in parentheses. The outcome variable and all continuous variables are scaled to range from 0 to 1. For positive coefficients, when the independent variable increases the mean of the target variable increases. Larger coefficient values indicate greater increases in the outcome variable.')
 tbl <- set_label(tbl, "summodel::rq1anxA")
 tbl<- set_all_padding(tbl,0)
 tbl <- set_col_width(tbl, c("40mm", "15mm", "15mm","15mm",
@@ -326,10 +323,7 @@ ggsave(p, file='output/coefs_rq1_imp.png',width=10, height=13) #save plot to out
 tbl <- export_summs(models[1:10],digits=2,
                     statistics = c(N = "nobs", R2adj = "adj.r.squared"))
 tbl <- set_font_size(tbl, 7)
-tbl <- set_caption(tbl, 'Results from country-by-country OLS models. 
-             Cell entries are OLS coefficients and robust standard
-              errors are in parentheses. The outcome variable (importance) 
-              and all continuous variables are scaled to range from 0 to 1.')
+tbl <- set_caption(tbl, 'Results from country-by-country OLS regressions for outcome variable importance (models include political and demographic controls). Cell entries are coefficient values and robust standard errors are in parentheses. The outcome variable and all continuous variables are scaled to range from 0 to 1. For positive coefficients, when the independent variable increases the mean of the target variable increases. Larger coefficient values indicate greater increases in the outcome variable.')
 tbl <- set_label(tbl, "summodel::rq1impA")
 tbl<- set_all_padding(tbl,0)
 tbl <- set_col_width(tbl, c("40mm", "15mm", "15mm","15mm",

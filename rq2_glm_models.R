@@ -292,10 +292,7 @@ tbl <- export_summs(models[1:10],digits=2,
                     statistics = c(N = "nobs"))
 tbl <- insert_row(tbl,c("Pseudo R2",R_sq_nb[1:10] ), after=48)
 tbl <- set_font_size(tbl, 7)
-tbl <- set_caption(tbl, 'Results from country-by-country negative binomial regressions. 
-             Cell entries are coefficients and standard
-              errors are in parentheses. The outcome variable is fact-checks. 
-              All continuous variables are scaled to range from 0 to 1.')
+tbl <- set_caption(tbl, 'Results from country-by-country negative binomial regressions for outcome variable fact-checking (models include political and demographic controls). Cell entries are coefficient values and standard errors are in parentheses. All continuous predictors have been normalized to range from 0 to 1. Positive coefficient values indicate an increase in the expected count of fact-checks. Larger coefficient values indicate higher rates of increase in the expected count of fact-checks.')
 tbl <- set_label(tbl, "summodel::rq2A")
 tbl<- set_all_padding(tbl,0)
 tbl<-set_width(tbl,"200mm")
