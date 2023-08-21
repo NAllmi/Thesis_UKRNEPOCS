@@ -120,7 +120,7 @@ addtorow$command <- addtorow$command <- c(paste0(paste0('& \\multicolumn{4}{c}{'
 print(xtable(tbl,
              digits = c(0,0,rep(c(1,1,0,0), length(var))),
              label='sumstats::vars',
-             caption = 'Summary statistics of main variables by country'),
+             caption = 'Summary statistics of the main variables (fact-checking, importance, and anxiety) by country'),
       add.to.row = addtorow, include.colnames = FALSE,
       include.rownames = FALSE,
       file = "output/mainvars_table.tex")
