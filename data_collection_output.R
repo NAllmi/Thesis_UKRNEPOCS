@@ -12,7 +12,6 @@ p<- ggplot(df, aes(x=country2, y=fact_checks, color=country2)) +
         axis.title = element_text(size = 15))+ 
   xlab('')+ 
   ylab('Fact-checked Statements')
-  #+ggtitle('Distribution of Fact-Checks by Country')
 
 ggsave(p, file='output/factchecks_bycountry.png',width=6, height=7) #save plot to output file
 
@@ -30,7 +29,6 @@ p <- ggplot(df, aes(x=fact_checks)) +
   scale_x_continuous(breaks=seq(0,10,1))+
   geom_vline(aes(xintercept=mean(fact_checks)),
              color="blue", linetype="dashed", size=1)
-  #+ggtitle('Fact-Checks Distribution')
 
 
 ggsave(p, file='output/factchecks_pooled.png',width=6, height=4) #save plot to output file
@@ -103,13 +101,10 @@ tbl <- df %>% group_by(country2) %>%
                    sd_imp=sd(importance_scale),
                    quant_25_imp=quantile(importance_scale, probs=c(0.25)),
                    quant_75_imp=quantile(importance_scale, probs=c(0.75))
-                   #,mean_aff = mean(imp_others),
-                   #sd_aff=sd(imp_others),
-                   #quant_25_aff=quantile(imp_others, probs=c(0.25)),
-                   #quant_75_aff=quantile(imp_others, probs=c(0.75))
+
   )  
 
-var <- c('Fact-Checks', 'Anxiety', 'Importance') #, 'Affect')
+var <- c('Fact-Checks', 'Anxiety', 'Importance') 
 addtorow <- list()
 addtorow$pos <- list(0,0)
 addtorow$command <- addtorow$command <- c(paste0(paste0('& \\multicolumn{4}{c}{', var, '}', collapse=''), '\\\\'),

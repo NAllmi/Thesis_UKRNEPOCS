@@ -1,6 +1,6 @@
-#----------------
-#   MODEL FIT
-#----------------
+#-----------------------------------
+#   MODEL FOR RESEARCH QUESTION 2
+#--------------------------------
 
 
 #CHECK DIAGNOSTICS FOR A COUNTRY MODEL
@@ -83,8 +83,6 @@ for (i in country_list){
   anxiety_pval    <- append(anxiety_pval, summary(nb)$coefficients[22,4])
   imp_sc_coef     <- append(imp_sc_coef,  summary(nb)$coefficients[23,1])
   imp_sc_pval     <- append(imp_sc_pval,  summary(nb)$coefficients[23,4])
-  #imp_others_coef <- append(imp_others_coef, summary(nb)$coefficients[24,1])
-  #imp_others_pval <- append(imp_others_pval, summary(nb)$coefficients[24,4])
 
   RMSE_nb <- append(RMSE_nb, sqrt(mean((aux$fact_checks - nb$fitted.values)^2)))
   
@@ -103,7 +101,6 @@ for (i in country_list){
               left_alt + right_alt +
               anxiety + 
               importance_scale
-            #+ important_others
             , data = aux)
   
   RMSE_ols <- append(RMSE_ols, sqrt(mean((aux$fact_checks - ols$fitted.values)^2)))
@@ -127,17 +124,8 @@ df2 <- data.frame(country = as.character(country_list) ,
                  anxiety_pval = anxiety_pval,
                  imp_sc_coef = imp_sc_coef, 
                  imp_sc_pval = imp_sc_pval 
-                 #imp_others_coef =imp_others_coef,
-                 #imp_others_pval =imp_others_pval
                  )
 
-#df2 <- df2  %>% dplyr::select(-c(8:11))
-
-#print(xtable(df2,
-#             digits = c( 0, 0, 2, 2, 0, 2,2,0 )),
-#      digits= 0,
-#      include.rownames=FALSE,
-#      file = "output/metrics_nb_ols.tex")
 
 
 #PLOT MAIN COEFFICIENTS 
@@ -235,9 +223,6 @@ ggsave(p, file='output/coefs_rq2.png',width=10, height=13) #save plot to output 
 #prediction vs predictor plots
 #------------------------------
 country_list <- unique(df$country2)
-#country_list<- c('Brazil', 'Romania', 'Belgium', 'Netherlands', 'Spain', 
-#                 'Poland', 'Czechia', 'United States', 'United Kingdom',
-#                 'Serbia')
 
 full_aux <- data.frame()
 
@@ -256,7 +241,6 @@ for (i in country_list){
                  left_alt + right_alt +
                  anxiety + 
                  importance_scale
-               #+ important_others
                , data = aux)
   
   aux$prediction <- nb$fitted.values

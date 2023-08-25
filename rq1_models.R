@@ -45,11 +45,11 @@ df_summ_anx <- data.frame(country = as.character(country_list) ,
                   R_sq_ols= R_sq_ols 
                   )
 
-print(xtable(df_summ_anx,
-             digits = c( 0, 0, 2, 2 )),
-      digits= 0,
-      include.rownames=FALSE,
-      file = "output/metrics_ols_anx.tex")
+#print(xtable(df_summ_anx,
+#             digits = c( 0, 0, 2, 2 )),
+#      digits= 0,
+#      include.rownames=FALSE,
+#      file = "output/metrics_ols_anx.tex")
 
 
 #plot coefficients for each model
@@ -195,7 +195,7 @@ for (i in country_list){
               political_orient + political_orient_sq +
               satisfaction_dem + 
               media_trust_scale + sp_media_lit_scale +
-              TV + newspapers + #social_media +
+              TV + newspapers + 
               radio +      
               aggregators+  messaging +  
               left_alt + right_alt +
@@ -219,11 +219,11 @@ df_summ_imp <- data.frame(country = as.character(country_list) ,
                           )
 
 
-print(xtable(df_summ_imp,
-             digits = c( 0, 0, 2, 2 )),
-      digits= 0,
-      include.rownames=FALSE,
-      file = "output/metrics_ols_imp.tex")
+#print(xtable(df_summ_imp,
+#             digits = c( 0, 0, 2, 2 )),
+#      digits= 0,
+#      include.rownames=FALSE,
+#      file = "output/metrics_ols_imp.tex")
 
 #plot coefficients for each model
 country_list <- unique(df$country2)

@@ -1,36 +1,30 @@
-# Thesis_UKRNEPOCS
+Thesis_UKRNEPOCS
 
 Built using R version 4.2.3
 
 The main research questions of the thesis are:
+RQ1: How does the consumption of political information through different media outlets affect the levels
+of concern in individuals regarding the Russia-Ukraine war?
+RQ2: How do anxiety and the importance assigned to the Russia-Ukraine war affect the amount of factchecking performed by individuals?
 
-How do different media diets affect levels of anxiety in individuals in regards to the the Russian invasion on the Ukraine?
 
-How do anxiety and the perceived importance of the Russian invasion on the Ukraine affect individuals attitudes towards fact-checking?
+DATA: 
+The \data subfolder contains all necessary data.
+
+CODE:
 
 Before running the models run the master.R file that loads libraries and sets working directory.
 
 master.R file runs:
 
 -data_preprocessing.R: load and prepare data
+	This code also runs data_collection_output.R : print plots and tables for data collection section 
+-rq1_models.R: runs models for the 1st research question
+-rq2_glm_models.R: runs models for the 2nd research question
+-efa.R : exploratory factory analysis for "concern for the war" scale 
+
+RESULTS:
+
+plots and tables are in the \output folder.
 
 
-Exploratory factory analysis for "concern for the war" scale:
-
--efa.R (Report of output - Exploratory Factor Analysis for Concern Likert Scale.doc)
-
-Models for RQ 1:
-
--anxiety_media_ols.R (Report Anxiety-Media Model Fixed Effects)
-
-Models for RQ2:
-
--glmm.R
-
--glm_by_country.R
-
-(Output report - GLMM - Model Report.doc)
-
-
-
-The \data subfolder contains all necessary data.
