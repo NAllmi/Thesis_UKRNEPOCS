@@ -32,4 +32,4 @@ RESULTS:
 
 plots and tables are in the \output folder.
 
-
+Final thesis is available in pdf format (Thesis_Allmi.pdf)
