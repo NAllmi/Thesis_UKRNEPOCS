@@ -1,35 +1,38 @@
 # Masters Thesis - Technical University of Munich
+## Exploring Political Information Fact-Checking Behavior in the Context of the Russia-Ukraine War
 
-## Political information fact-checking behavior in the context of the Russia-Ukraine war
+### Overview
 
-Built using R version 4.2.3
+This research investigates the interplay between media consumption, individual concerns about the Russia-Ukraine war, and fact-checking behavior. The study is conducted using R version 4.2.3.
 
-The main research questions of the thesis are:
+### Research Questions
 
-RQ1: How does the consumption of political information through different media outlets affect the levels
-of concern in individuals regarding the Russia-Ukraine war?
+**RQ1:** How does the consumption of political information through different media outlets affect the levels of concern in individuals regarding the Russia-Ukraine war?
 
-RQ2: How do anxiety and the importance assigned to the Russia-Ukraine war affect the amount of factchecking performed by individuals?
+**RQ2:** How do anxiety and the importance assigned to the Russia-Ukraine war affect the amount of fact-checking performed by individuals?
 
+### Data
 
-DATA: Not publicly available.
+The dataset used in this study is not publicly available.
 
-CODE:
+### Code
 
-Before running the models run the master.R file that loads libraries and sets working directory.
+Before running the models, execute the `master.R` file, which loads libraries and sets the working directory. The `master.R` file runs the following scripts:
 
-master.R file runs:
+- `data_preprocessing.R`: Loads and prepares data. Additionally, this code executes `data_collection_output.R`, generating plots and tables for the data collection section.
 
--data_preprocessing.R: load and prepare data (This code also runs data_collection_output.R : print plots and tables for data collection section) 
- 
--rq1_models.R: runs models for the 1st research question
+- `rq1_models.R`: Runs models for the first research question.
 
--rq2_glm_models.R: runs models for the 2nd research question
+- `rq2_glm_models.R`: Runs models for the second research question.
 
--efa.R : exploratory factory analysis for "concern for the war" scale 
+- `efa.R`: Conducts exploratory factor analysis for the "concern for the war" scale.
 
-RESULTS:
+### Results
 
-plots and tables are in the \output folder.
+Plots and tables can be found in the `output` folder.
 
-Final thesis is available in pdf format (Thesis_Allmi.pdf)
+### Thesis Document
+
+The final thesis is available in PDF format as `Thesis_Allmi.pdf`. Explore the comprehensive findings and analyses presented in the document.
+
+Feel free to reach out for any additional information or clarifications.
