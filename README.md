@@ -1,4 +1,4 @@
-# Maters Thesis - Technical University of Munich
+# Masters Thesis - Technical University of Munich
 
 ## Political information fact-checking behavior in the context of the Russia-Ukraine war
 
