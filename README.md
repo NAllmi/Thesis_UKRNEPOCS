@@ -1,6 +1,6 @@
 # Maters Thesis - Technical University of Munich
 
-# Political information fact-checking behavior in the context of the Russia-Ukraine war
+## Political information fact-checking behavior in the context of the Russia-Ukraine war
 
 Built using R version 4.2.3
 
