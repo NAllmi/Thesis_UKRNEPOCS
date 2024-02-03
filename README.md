@@ -1,5 +1,5 @@
 # Masters Thesis - Technical University of Munich
-## Exploring Political Information Fact-Checking Behavior in the Context of the Russia-Ukraine War
+## Political Information Fact-Checking Behavior in the Context of the Russia-Ukraine War
 
 ### Overview
 
