@@ -12,8 +12,7 @@ of concern in individuals regarding the Russia-Ukraine war?
 RQ2: How do anxiety and the importance assigned to the Russia-Ukraine war affect the amount of factchecking performed by individuals?
 
 
-DATA: 
-The \data subfolder contains all necessary data.
+DATA: Not publicly available.
 
 CODE:
 
